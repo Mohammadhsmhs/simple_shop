@@ -24,7 +24,11 @@ class CartItem extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      onDismissed: (direction) => cart.deleteItem(id),
+      onDismissed: (direction) => // direction == DismissDirection.endToStart
+          // ?
+          cart.deleteItem(id),
+      // : cart.deleteQuantity(id),
+
       child: Card(
         child: ListTile(
           leading: CircleAvatar(
