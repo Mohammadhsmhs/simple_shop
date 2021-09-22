@@ -73,4 +73,9 @@ class Cart with ChangeNotifier {
             quantity: _items[productId]!.quantity - 1));
     notifyListeners();
   }
+
+  void clear() {
+    _items = {};
+    notifyListeners();
+  }
 }
