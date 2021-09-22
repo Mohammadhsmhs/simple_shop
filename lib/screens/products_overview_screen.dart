@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:simple_shop/providers/cart.dart';
-import 'package:simple_shop/screens/cart_screen.dart';
-import 'package:simple_shop/widgets/badge.dart';
 
-import '../widgets/products_grid.dart';
+import '/providers/cart.dart';
+import '/screens/cart_screen.dart';
+import '/widgets/app_drwaer.dart';
+import '/widgets/badge.dart';
+import '/widgets/products_grid.dart';
 
 enum menu {
   favorits,
@@ -58,6 +59,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           ),
         ],
       ),
+      drawer: AppDrawer(),
       body: ProductsGrid(_isFavorit),
     );
   }
